@@ -13,8 +13,8 @@
        body >div> h2{
             font-family: 'Oleo Script Swash Caps', cursive;
             display: inline-block;
-           font-size: 50px;
-           color: rgba(238,64,240,0.68);
+           font-size: 35px;
+           color: deeppink;
         }
        body>div{
            width: max-content;
@@ -42,12 +42,16 @@
             bottom: 300px;
             margin: auto;
             border: 2px solid black;
-            width: 343px;
-            height: 236px;
+            width: 280px;
+            height: 178px;
             overflow: hidden;
             border: 1px solid deeppink;
             border-radius: 40px 0 40px 0;
             box-shadow: 1px 3px 29px 21px purple;
+            animation-name: glow2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
 
 
         }
@@ -60,12 +64,16 @@
             bottom: 0;
             margin: auto;
             border: 2px solid black;
-            width: 343px;
-            height: 236px;
+            width: 280px;
+            height: 178px;
             overflow: hidden;
             border: 1px solid deeppink;
             border-radius: 0px 40px 0px 40px;
             box-shadow: 1px 3px 29px 21px purple;
+            animation-name: glow2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
 
 
         }
@@ -177,6 +185,19 @@
                 transform: translateY(-75%);
             }
         }
+       @keyframes glow2 {
+           0% {
+               /*border-color: #BB6DD7;*/
+               box-shadow: 1px 3px 29px 1px purple;
+           }
+           /*50%{*/
+           /*    box-shadow: 15px -10px 35px 12px darkviolet;*/
+           /*}*/
+           100% {
+               box-shadow: 1px 3px 39px 20px darkviolet;
+           }
+
+       }
         @media all and (max-width: 600px) {
             body>section:nth-child(2) {
 
