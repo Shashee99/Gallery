@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Water+Brush&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/"> -->
+    <style>
+       body >div> h2{
+            font-family: 'Oleo Script Swash Caps', cursive;
+            display: inline-block;
+           font-size: 50px;
+        }
+       body>div{
+           width: max-content;
+          position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+       }
+        body{
+            margin: 0;
+            background: url("assets/images/img.png");
+            /*background-image: url("photographer.jpg"); !* The image used *!*/
+            /*background-color: #cccccc; !* Used if the image is unavailable *!*/
+            height: 500px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            /*background-repeat: no-repeat; !* Do not repeat the image *!*/
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+        body>section:nth-child(2){
+            position: absolute;
+            top: 78px;
+            left: 0;
+            right: 0;
+            bottom: 300px;
+            margin: auto;
+            border: 2px solid black;
+            width: 343px;
+            height: 236px;
+            overflow: hidden;
+            border: 1px solid deeppink;
+            border-radius: 40px 0 40px 0;
+            box-shadow: 1px 3px 29px 21px purple;
+
+
+        }
+
+        body>section:nth-child(3){
+            position: absolute;
+            top: 313px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 2px solid black;
+            width: 343px;
+            height: 236px;
+            overflow: hidden;
+            border: 1px solid deeppink;
+            border-radius: 0px 40px 0px 40px;
+            box-shadow: 1px 3px 29px 21px purple;
+
+
+        }
+        section:nth-child(2)>section:nth-child(1){
+            border:1px solid blue;
+            position: absolute;
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation-name: slidex;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 5s;
+            flex-direction: row;
+
+
+        }
+        section:nth-child(3)>section:nth-child(1){
+            border:1px solid blue;
+            position: absolute;
+            width: 100%;
+            height: 400%;
+            display: flex;
+            animation-name: slidey;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 5s;
+            flex-direction: column;
+
+
+        }
+        section:nth-child(2)>section:nth-child(1)>div{
+            flex-grow: 1;
+            flex-shrink: 0;
+
+        }
+        section:nth-child(3)>section:nth-child(1)>div{
+            flex-grow: 1;
+            flex-shrink: 0;
+
+
+        }
+        section:nth-child(2)>section:nth-child(1)>div:nth-child(1){
+            background: url("assets/images/img1.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(2)>section:nth-child(1)>div:nth-child(2){
+            background: url("assets/images/img2.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(2)>section:nth-child(1)>div:nth-child(3){
+            background: url("assets/images/img3.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(2)>section:nth-child(1)>div:nth-child(4){
+            background: url("assets/images/img4.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(3)>section:nth-child(1)>div:nth-child(1){
+            background: url("assets/images/img1.jpg");
+            background-size: cover;
+
+
+        }
+        section:nth-child(3)>section:nth-child(1)>div:nth-child(2){
+            background: url("assets/images/img2.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(3)>section:nth-child(1)>div:nth-child(3){
+            background: url("assets/images/img3.jpg");
+            background-size: cover;
+
+        }
+        section:nth-child(3)>section:nth-child(1)>div:nth-child(4){
+            background: url("assets/images/img4.jpg");
+            background-size: cover;
+
+        }
+        @keyframes slidex {
+            0%,10%{
+                transform: translateX(0%);
+            }
+            25%,30%{
+                transform: translateX(-25%);
+            }
+            50%,75%{
+                transform: translateX(-50%);
+            }
+            100%{
+                transform: translateX(-75%);
+            }
+        }
+        @keyframes slidey {
+            0%,10%{
+                transform: translateY(0%);
+            }
+            25%,30%{
+                transform: translateY(-25%);
+            }
+            50%,75%{
+                transform: translateY(-50%);
+            }
+            100%{
+                transform: translateY(-75%);
+            }
+        }
+        @media all and (max-width: 425px) {
+            body>section:nth-child(2) {
+
+                width: 247px;
+                height: 178px;
+
+            }
+            body>section:nth-child(3) {
+
+                width: 247px;
+                height: 178px;
+
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <h2>My Gallery</h2>
+</div>
+
+
+<section>
+    <section>
+        <div id="11"></div>
+        <div id="12"></div>
+        <div id="13"></div>
+        <div id="14"></div>
+    </section>
+</section>
+<section>
+    <section>
+        <div id="11"></div>
+        <div id="12"></div>
+        <div id="13"></div>
+        <div id="14"></div>
+    </section>
+</section>
+</body>
+</html>
